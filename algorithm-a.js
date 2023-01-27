@@ -6,6 +6,7 @@ function convertCtoF(celsius) {
 
 convertCtoF(30);
 
+//! ---------
 
 // #2
 function reverseString(str) {
@@ -40,3 +41,18 @@ function reverseString(str) {
 }
 
 reverseString("hello"); // olleh
+
+
+//! ---------
+// #3
+function factorialize(num) {
+    let total = 1;
+
+    for (let i = 0; i < num; i++) {
+        // total *= i + 1;
+        total = total * (i + 1);
+    }
+    return total;
+}
+
+console.log(factorialize(5));
