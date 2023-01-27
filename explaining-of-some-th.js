@@ -1,17 +1,49 @@
-// последовательная асинхронность с помощью CALLBACK.
-console.log(`Request data...`);
+//* последовательная асинхронность с помощью CALLBACK.
+// console.log(`Request data...`);
 
-setTimeout(() => {
-    console.log(`Preparing data...`);
+// setTimeout(() => {
+//     console.log(`Preparing data...`);
 
-    const backendData = {
-        server: 'aws',
-        port: 2000,
-        status: 'working'
-    }
+//     const backendData = {
+//         server: 'aws',
+//         port: 2000,
+//         status: 'working'
+//     }
 
+//     setTimeout(() => {
+//         backendData.modified = true;
+//         console.log(`Data received`, backendData);
+//     }, 2000);
+// }, 2000);
+
+
+
+
+//* настоящие promise'ы.
+const p = new Promise((resolve, reject) => {
     setTimeout(() => {
-        backendData.modified = true;
-        console.log(`Data received`, backendData);
+        console.log(`Preparing data...`);
+        const backendData = {
+            server: 'aws',
+            port: 2000,
+            status: 'working'
+        }
+        resolve(backendData);
     }, 2000);
-}, 2000);
+});
+
+
+p.then((data) => {
+    const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            data.modified = true;
+            resolve(data);
+        }, 2000);
+    });
+
+    p2.then((clientData) => {
+        console.log(`Data received`, clientData);
+    });
+
+
+})
