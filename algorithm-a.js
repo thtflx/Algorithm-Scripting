@@ -114,3 +114,22 @@ console.log(largestOfFour([
     [32, 35, 37, 39],
     [1000, 1001, 857, 1]
 ]));
+
+
+
+// --- --- --- --- --- --- --- --- --- --- --- --- FROM-REAL-INTERVIEWS-SECTION--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---  
+
+//* Собеседование JUNIOR FRONTEND REACT разработчика 
+//* link ( https://youtu.be/P2x_lmvVOfE )
+
+//! Сортировка массива с числами.
+// Ya'ni, massivni ichidagi sonlarni tartib bilan joylashtirish kerak.
+const array = [-1, 553, 24, 5, 19];
+
+console.log(array.sort((a, b) => {
+    if (a > b) {
+        return 1;
+    } else {
+        return -1;
+    }
+}));
