@@ -76,3 +76,27 @@ sleep(4000).then(() => console.log(`Rocket has been flown.`))
 Promise.race([sleep(2000), sleep(5000)]).then(() => {
     console.log(`Race promises`);
 })
+
+
+
+
+// mytry
+// e-mail request.
+const emailRequest = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const backendInfo = {
+            server: 'bws',
+            port: 5000,
+            status: 'working'
+        }
+        resolve(backendInfo);
+    }, 2000);
+});
+
+
+emailRequest
+    .then((data) => {
+        console.log(`Original data: `, data);
+    })
+    .catch((err) => console.log(`Error: `, err))
+    .finally(() => console.log(`Request completed!`))
