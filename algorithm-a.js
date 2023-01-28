@@ -67,11 +67,8 @@ console.log(factorialize(5));
 //! ---------
 // #4 
 function findLongestWordLength(str) {
-    let arr = str.split(" ");
-    let biggest = arr[0].length;
-
-    // console.log('Array length: ', arr.length)
-    // console.log('Biggest: ', biggest);
+    let arr = str.split(" "); // 3
+    let biggest = arr[0].length; // 5 *это самое первое слово из массива*
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].length > biggest) {
@@ -86,17 +83,5 @@ console.log(findLongestWordLength("Piece of sheet"));
 
 //todo word explanation. 
 // 1 - мы убираем пустые строки с помощью split, чтобы оно потом нам не мешало
-// 2 - 
-// 3 - 
-
-
-
-// const some = 'bulka s maslom';
-const word = `Bulka s maslom`;
-const some = word.split(" ");
-const bigg = some[0].length;
-
-for (let i = 0; i < bigg; i++) {
-
-}
-console.log(bigg)
+// 2 - находим длину самого первого слова из списка
+// 3 - пишем loop
