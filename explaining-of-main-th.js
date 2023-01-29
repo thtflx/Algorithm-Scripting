@@ -69,9 +69,9 @@ sleep(4000).then(() => console.log(`Rocket has been flown.`))
 
 
 //* Еще 2 promise'a.
-// Promise.all([sleep(2000), sleep(5000)]).then(() => {
-//     console.log(`All promises`);
-// })
+Promise.all([sleep(2000), sleep(5000)]).then(() => {
+    console.log(`All promises`);
+})
 
 Promise.race([sleep(2000), sleep(5000)]).then(() => {
     console.log(`Race promises`);
