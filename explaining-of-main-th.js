@@ -241,4 +241,41 @@ fetch('https://reqres.in/api/users/23', {
         return res.json()
     })
     .then((data) => console.log(data))
+    .catch((err) => console.log('Error:', err));
+
+
+// mytry.
+fetch('https://jsonplaceholder.typicode.com/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: 'thtflx',
+            server: 'fxl'
+        })
+    })
+    .then((resp) => {
+        return resp.json();
+    })
+    .then((data) => console.log(data))
+    .catch((error) => console.log('ERROR:', error));
+
+
+// mytry
+const someRequest = 'https://jsonplaceholder.typicode.com/users';
+fetch(someRequest, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: 'ginger'
+        })
+    })
+    .then((res) => {
+        return res.json();
+    })
+    .then((data) => console.log(data))
     .catch((err) => console.log('Error:', err))
+    .finally(() => console.log('Request is completed!'))
