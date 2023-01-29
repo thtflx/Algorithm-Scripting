@@ -188,35 +188,57 @@
 
 //! Fetch.
 // *сначала подключаем наш js в html файл*
-const requestURL = `https://jsonplaceholder.typicode.com/users`;
+// const requestURL = `https://jsonplaceholder.typicode.com/users`;
 
-function sendRequest(method, url, body = null) {
-    const headers = {
-        'Content-Type': 'application/json'
-    }
-    return fetch(url, {
-            method: method,
-            body: JSON.stringify(body),
-            headers: headers
-        })
-        .then((response) => {
-            if (response.ok) {
-                return response.json();
-            }
-            return response.json()
-                .then((error) => {
-                    const e = new Error('Something went wrong!');
-                    e.data = error;
-                    throw e;
-                })
-        })
-}
+// function sendRequest(method, url, body = null) {
+//     const headers = {
+//         'Content-Type': 'application/json'
+//     }
+//     return fetch(url, {
+//             method: method,
+//             body: JSON.stringify(body),
+//             headers: headers
+//         })
+//         .then((response) => {
+//             if (response.ok) {
+//                 return response.json();
+//             }
+//             return response.json()
+//                 .then((error) => {
+//                     const e = new Error('Something went wrong!');
+//                     e.data = error;
+//                     throw e;
+//                 })
+//         })
+// }
 
-sendRequest('POST', requestURL, body)
+// sendRequest('POST', requestURL, body)
+//     .then((data) => console.log(data))
+//     .catch((err) => console.log(err));
+
+// const body = {
+//     name: 'Azizi',
+//     age: 19
+// }
+
+
+
+
+
+//* Дополнительно.
+// fetch(`https://jsonplaceholder.typicode.com/users`)
+fetch('https://reqres.in/api/users/23', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: 'User 1',
+            server: 'aws'
+        })
+    })
+    .then((res) => {
+        return res.json()
+    })
     .then((data) => console.log(data))
-    .catch((err) => console.log(err));
-
-const body = {
-    name: 'Azizi',
-    age: 19
-}
+    .catch((err) => console.log('Error:', err))
