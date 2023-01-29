@@ -234,7 +234,7 @@ fetch('https://reqres.in/api/users/23', {
         },
         body: JSON.stringify({
             name: 'User 1',
-            server: 'aws'
+            server: 'chrome'
         })
     })
     .then((res) => {
