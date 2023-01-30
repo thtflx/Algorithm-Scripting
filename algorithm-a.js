@@ -81,6 +81,7 @@ function findLongestWordLength(str) {
 console.log(findLongestWordLength("Piece of sheet"));
 
 
+
 //todo word explanation. 
 // 1 - мы убираем пустые строки с помощью split, чтобы оно потом нам не мешало
 // 2 - находим длину самого первого слова из списка
