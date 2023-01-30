@@ -118,6 +118,42 @@ console.log(largestOfFour([
 
 
 
+
+//! ---------
+// #6
+function confirmEnding(str, target) {
+    let ending = str.split("").splice(str.length - target.length).join("");
+    console.log(ending);
+
+    return ending == target;
+}
+
+confirmEnding("Bastian", "axn");
+
+
+
+
+//! ---------
+// #7
+function repeatStringNumTimes(str, num) {
+    return str;
+}
+
+repeatStringNumTimes("abc", 3);
+
+
+
+
+
+//! ---------
+// #8
+
+
+
+
+
+
+
 // --- --- --- --- --- --- --- --- --- --- --- --- FROM-REAL-INTERVIEWS-SECTION--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---  
 
 //* Собеседование JUNIOR FRONTEND REACT разработчика 
