@@ -136,10 +136,20 @@ confirmEnding("Bastian", "axn");
 //! ---------
 // #7
 function repeatStringNumTimes(str, num) {
-    return str;
+    let answer = "";
+
+    if (num <= 0) {
+        return "";
+    }
+
+    for (let i = 0; i < num; i++) {
+        answer += str;
+    }
+
+    return answer;
 }
 
-repeatStringNumTimes("abc", 3);
+console.log(repeatStringNumTimes("abc", 30));
 
 
 
@@ -147,7 +157,18 @@ repeatStringNumTimes("abc", 3);
 
 //! ---------
 // #8
+function truncateString(str, num) {
 
+    if (str.length <= num) {
+        return str;
+    }
+
+    let ourStr = str.split("").splice(0, num).join("");
+
+    return ourStr + "...";
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 1897));
 
 
 
