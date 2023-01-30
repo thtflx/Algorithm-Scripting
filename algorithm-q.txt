@@ -146,3 +146,38 @@ Passed:truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a
 Passed:truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2) should return the string A-tisket a-tasket A green and yellow basket.
 Passed:truncateString("A-", 1) should return the string A....
 Passed:truncateString("Absolutely Longer", 2) should return the string Ab....
+
+
+
+
+#9
+Finders Keepers
+Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+
+
+// Tests
+Passed:findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) should return 8.
+Passed:findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }) should return undefined.
+
+
+
+
+
+#10
+Boo who
+Check if a value is classified as a boolean primitive. Return true or false.
+
+Boolean primitives are true and false.
+
+
+// Tests
+Passed:booWho(true) should return true.
+Passed:booWho(false) should return true.
+Passed:booWho([1, 2, 3]) should return false.
+Passed:booWho([].slice) should return false.
+Passed:booWho({ "a": 1 }) should return false.
+Passed:booWho(1) should return false.
+Passed:booWho(NaN) should return false.
+Passed:booWho("a") should return false.
+Passed:booWho("true") should return false.
+Passed:booWho("false") should return false.

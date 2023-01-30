@@ -47,6 +47,8 @@ function reverseString(str) {
 reverseString("hello"); // olleh
 
 
+
+
 //! ---------
 // #3
 function factorialize(num) {
@@ -79,7 +81,6 @@ function findLongestWordLength(str) {
 }
 
 console.log(findLongestWordLength("Piece of sheet"));
-
 
 
 //todo word explanation. 
@@ -154,7 +155,6 @@ console.log(repeatStringNumTimes("abc", 30));
 
 
 
-
 //! ---------
 // #8
 function truncateString(str, num) {
@@ -170,6 +170,35 @@ function truncateString(str, num) {
 
 console.log(truncateString("A-tisket a-tasket A green and yellow basket", 1897));
 
+
+
+
+//! ---------
+// #9
+function findElement(arr, func) {
+    for (let i = 0; i < arr.length; i++) {
+        if (func(arr[i])) {
+            return arr[i];
+        }
+    }
+}
+
+console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+
+
+
+
+//! ---------
+// #10
+function booWho(bool) {
+    if (typeof bool == 'boolean') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(booWho(true));
 
 
 
