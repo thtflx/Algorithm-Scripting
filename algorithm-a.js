@@ -125,13 +125,6 @@ function confirmEnding(str, target) {
 confirmEnding("Bastian", "xxxx");
 
 
-// ------
-function confEnd(str, targ) {
-    let ending = str.split("").splice(str.length - targ.length).join(""); // ending'ni belgilaymiz, ichida str(chek) .split("").splice(ichida str.lth - tar.lth).join("") qilamiz
-    console.log(ending); //  
-
-    return ending == targ;
-}
 
 
 
