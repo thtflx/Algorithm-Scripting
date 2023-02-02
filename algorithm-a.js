@@ -122,7 +122,16 @@ function confirmEnding(str, target) {
     return ending == target;
 }
 
-confirmEnding("Bastian", "axn");
+confirmEnding("Bastian", "xxxx");
+
+
+// ------
+function confEnd(str, targ) {
+    let ending = str.split("").splice(str.length - targ.length).join(""); // 
+    console.log(ending);
+
+    return ending == targ;
+}
 
 
 
